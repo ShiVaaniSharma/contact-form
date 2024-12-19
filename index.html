@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inika:wght@700&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div id="navigation">
+        <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+
+        </div>
+      <div class="container">
+        <div class="form">
+            <div class="contact-info">
+                <h1><a href="#">Intoduction</a></h1>
+                <h1><a href="#">What I Do</a></h1>
+                <h1><a href="#">My Blogs</a></h1>
+                <h1><a href="#">Contact Me</a></h1>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">  
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="contact-form">
+                <form action="#" autocomplete="off">
+                    <h1 class="title">Drop A Line ...</h1>
+
+                    <div class="input-container ">
+                    <label for="">name</label>
+                    <span>name</span>
+                    <input type="text" name="name" class="input">
+                    </div>
+                    
+                       <div class="input-container">
+                          <input type="email" name="name" class="input">
+                          <label for="">Email</label>
+                          <span>Email</span>
+
+                        </div>
+                        
+                        <div class="input-container">
+                            <input type="tel" name="name" class="input">
+                            <label for="">Number</label>
+                            <span>Number</span>
+
+                        </div> 
+                            
+                        <div class="input-container textarea">
+                            <textarea name="message" class="input"></textarea>
+                            <label for="message">Message</label>
+                            <span>Message</span>
+
+                        </div>
+                        <input type="submit" value="submit" class="btn">
+                </form>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    
+<script>
+    const inputs = document.querySelectorAll(".input");
+
+function focusFunc(){
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+function blurFunc(){
+    let parent = this.parentNode;
+    if(this.value == ""){
+
+    
+    parent.classList.remove("focus");
+    }
+}
+inputs.forEach(input => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+
+});
+</script>
+
+</body>
+</html>
